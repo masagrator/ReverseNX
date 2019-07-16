@@ -24,6 +24,7 @@ Confirmed games working:
 Confirmed games Crashing:
 - Octopath Traveler
 - American Fugitive
+- Mario Kart 8
 
 Thanks to 
 
