@@ -11,11 +11,11 @@ or
 
 When both flags are there or none of them, plugin will ignore loading.
 
-
-
+>
+>
 [Confirmed games working or crashing](gameslist.md)
-
-
+>
+>
 
 Thanks to 
 
