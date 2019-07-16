@@ -10,3 +10,13 @@ Confirmed games working:
 Confirmed games Crashing:
 - Octopath Traveler
 - American Fugitive
+
+Thanks to 
+
+**shinyquagsire23** for *SaltyNX*
+
+https://github.com/shinyquagsire23/SaltyNX
+
+**ultimate-research** for *code-mod-framework*
+
+https://github.com/ultimate-research/code-mod-framework
