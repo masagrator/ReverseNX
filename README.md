@@ -22,9 +22,9 @@ Confirmed games working:
 - Yooka-Yaylee
 
 Confirmed games Crashing:
-- Octopath Traveler
-- American Fugitive
-- Mario Kart 8
+- American Fugitive (SaltyNX error)
+- Octopath Traveler (SaltyNX error)
+- Mario Kart 8 (unknown, sometimes works, sometimes not, bugs SaltyNX without getting error)
 
 Thanks to 
 
