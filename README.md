@@ -12,7 +12,7 @@ It should work with ReinX too.
 Plugin works always globally. For now flag per titleid is not supported (this would need modifications in SaltyNX).
 
 Flags:
-create in folder `saltynx/plugins/ReverseNX/` empty file:
+create in folder `saltysd/plugins/ReverseNX/` empty file:
 - `docked.flag` for docked mode
 
 or
