@@ -28,6 +28,6 @@ https://github.com/jugeeya/UltimateTrainingModpack/releases/tag/1.1
 
 
 
-How to compile
+How to compile plugin
 
 https://github.com/ultimate-research/code-mod-framework/wiki/Environment-Setup:-Getting-Started
