@@ -25,6 +25,12 @@ For docked mode is recommended to use OC settings exactly as used in docked mode
 
 -----------
 
+Known issues:
+
+- Instability with some homebrew
+
+- SaltyNX is still under development, so it may cause issues on it's own. Different versions of game can behave diversely (f.e. Octopath Traveler)
+
 Thanks to 
 
 **shinyquagsire23** for *SaltyNX*
