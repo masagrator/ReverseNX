@@ -9,7 +9,7 @@ It should work with ReinX too.
 
 -----------
 
-Plugin works always globally. for now flag per titleid is not supported.
+Plugin works always globally. For now flag per titleid is not supported.
 
 Flags:
 create in folder `saltynx/plugins/ReverseNX/` empty file:
