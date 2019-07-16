@@ -8,7 +8,7 @@
 | Mages of Mystralia |   |   |
 | Octopath Traveler | v3 (1.0.3) |   |
 | Super Mario Maker 2 |   |   |
-| The Legend of Zelda: Breath of the Wild |   |   |
+| The Legend of Zelda: Breath of the Wild | 1.6.0 |   |
 | This is the Police | v1 (1.0.1) |   |
 | Yooka-Yaylee |   |   |
 
