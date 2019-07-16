@@ -14,4 +14,4 @@
 | Not working | Why? |
 | ------------- | ------------- |
 | American Fugitive | SaltyNX error, it crashes system even without ReverseNX plugin |
-| Mario Kart 8 | unknown, sometimes works, sometimes not, bugs ReverseNX without getting error to the state that Switch stays with the same mode and needs hard reboot for plugin to work again |
+| Mario Kart 8 | unknown, sometimes works, sometimes not, bugs ReverseNX without getting error to the state that Switch stays with the same mode and needs hard reboot for plugin to reset |
