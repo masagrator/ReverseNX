@@ -8,6 +8,7 @@
 | Mages of Mystralia | v1 (1.0.1)  |   |
 | Octopath Traveler | v3 (1.0.3) |   |
 | Super Mario Maker 2 | v1 (1.0.1)  |   |
+| Team Sonic Racing | v2 (1.0.3)  |   |
 | The Legend of Zelda: Breath of the Wild | v12 (1.6.0) |   |
 | This is the Police | v1 (1.0.1) |   |
 | Yooka-Yaylee | v1 (1.1.0)  |   |
