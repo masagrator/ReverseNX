@@ -23,6 +23,9 @@ https://github.com/shinyquagsire23/SaltyNX
 
 https://github.com/ultimate-research/code-mod-framework
 
+**jugeeya** for precompiled SaltyNX nsp sysmodule. Originally it's compiled as kip (precompiled sysmodule only in release)
+https://github.com/jugeeya/UltimateTrainingModpack/releases/tag/1.1
+
 
 
 How to compile
