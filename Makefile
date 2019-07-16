@@ -31,7 +31,7 @@ include $(DEVKITPRO)/libnx/switch_rules
 #---------------------------------------------------------------------------------
 TARGET		:=	ReverseNX
 BUILD		:=	build
-SOURCES		:=	source source/imports/lib source/saltysd source/useful
+SOURCES		:=	source source/saltysd
 DATA		:=	data
 INCLUDES	:=	include
 EXEFS_SRC	:=	exefs_src

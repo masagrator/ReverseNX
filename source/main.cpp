@@ -64,29 +64,69 @@ void __attribute__((weak)) NORETURN __libnx_exit(int rc) {
 // return 0 - handheld mode
 // return 1 - docked mode
 
-uint8_t GetPerformanceMode() {
+uint32_t GetPerformanceMode1() {
   return 1;
 }
 
-uint8_t GetOperationMode() {
+uint8_t GetOperationMode1() {
   return 1;
+}
+
+uint32_t GetPerformanceMode0() {
+  return 0;
+}
+
+uint8_t GetOperationMode0() {
+  return 0;
 }
 
 int main(int argc, char *argv[]) {
 	SaltySD_printf("SaltySD ReverseNX: alive\n");
+	
+	FILE* flag_handheld = SaltySDCore_fopen("sdmc:/SaltySD/plugins/ReverseNX/handheld.flag", "r+b");
+	FILE* flag_docked = SaltySDCore_fopen("sdmc:/SaltySD/plugins/ReverseNX/docked.flag", "r+b");
 	
 	// Get anchor for imports
 	// do not remove if you plan on using IMPORT
 	ANCHOR_ABS = SaltySDCore_getCodeStart();
 	
 	// Add function replacements here
-	SaltySD_printf("Setting GetPerformanceMode: 1\n");
-	SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode);
-	SaltySD_function_replace_sym("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode);
-	SaltySD_printf("Setting GetOperationMode: 1\n");
-	SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode);
-	SaltySD_function_replace_sym("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode);
-	SaltySD_printf("SaltySD ReverseNX: finished\n");
+	if(flag_handheld) {
+		if (flag_docked) {
+			SaltySD_printf("Both flags detected. Applying default graphics settings.\n");
+			SaltySDCore_fclose(flag_handheld);
+			SaltySDCore_fclose(flag_docked);
+		}
+		else if(!flag_docked) {
+			SaltySD_printf("Handheld flag detected. Applying handheld graphics settings.\n");		
+			SaltySD_printf("Setting GetPerformanceMode: 0\n");
+			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode0);
+			SaltySD_function_replace_sym("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode0);
+			SaltySD_printf("Setting GetOperationMode: 0\n");
+			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode0);
+			SaltySD_function_replace_sym("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode0);
+			SaltySD_printf("SaltySD ReverseNX: finished\n");
+			SaltySDCore_fclose(flag_handheld);
+		}
+	}
+
+	else if(!flag_handheld) {
+		if(!flag_docked) {
+		SaltySD_printf("No flag detected. Applying default graphics settings.\n");
+		}
+		else if(flag_docked) {
+			SaltySD_printf("Docked flag detected. Applying docked graphics settings.\n");	
+			SaltySD_printf("Setting GetPerformanceMode: 1\n");
+			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode1);
+			SaltySD_function_replace_sym("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode1);
+			SaltySD_printf("Setting GetOperationMode: 1\n");
+			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode1);
+			SaltySD_function_replace_sym("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode1);
+			SaltySD_printf("SaltySD ReverseNX: finished\n");
+			SaltySDCore_fclose(flag_docked);
+		}
+		
+	}
 
 	__libnx_exit(0);
 }
