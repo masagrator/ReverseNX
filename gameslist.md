@@ -1,5 +1,6 @@
 | Working |
 | ------------- |
+| Crash Bandicoot N.Sane Trilogy |  
 | Crash Team Racing |  
 | God Eater 3 |  
 | Kirby Star Allies |  
