@@ -18,6 +18,7 @@ When both flags are there or none of them, plugin will ignore loading.
 For docked mode is recommended to use OC settings exactly as used in docked mode:
 
 >handheld_charging_gpu=768
+>
 >handheld_charging_mem=1600
 
 [Confirmed games working or not](gameslist.md)
