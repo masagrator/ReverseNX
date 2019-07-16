@@ -9,7 +9,7 @@
 | Octopath Traveler | v3 (1.0.3) |   |
 | Super Mario Maker 2 |   |   |
 | The Legend of Zelda: Breath of the Wild |   |   |
-| This is the Police |   |   |
+| This is the Police | v1 (1.0.1) |   |
 | Yooka-Yaylee |   |   |
 
 | Not working | Version(s) | Why? |
