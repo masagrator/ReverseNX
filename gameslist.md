@@ -1,7 +1,7 @@
 | Working | Notes |
 | ------------- | ------------- |
 | Crash Bandicoot N.Sane Trilogy |   |
-| Crash Team Racing | docked.flag also enables 4-player splitscreen |
+| Crash Team Racing | docked.flag also enables 4-player splitscreen, handheld.flag disables it |
 | God Eater 3 |   |
 | Kirby Star Allies |   |
 | Mages of Mystralia |   |
