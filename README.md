@@ -11,20 +11,7 @@ or
 
 When both flags are there or none of them, plugin will ignore loading.
 
-Confirmed games working:
-- Crash Team Racing
-- God Eater 3
-- Kirby Star Allies
-- Mages of Mystralia
-- Super Mario Maker 2
-- The Legend of Zelda: Breath of the Wild
-- This is the Police
-- Yooka-Yaylee
-
-Confirmed games Crashing:
-- American Fugitive (SaltyNX error)
-- Octopath Traveler (SaltyNX error)
-- Mario Kart 8 (unknown, sometimes works, sometimes not, bugs SaltyNX without getting error)
+[Confirmed games working or crashing](gameslist.md)
 
 Thanks to 
 
