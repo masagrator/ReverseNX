@@ -20,3 +20,7 @@ https://github.com/shinyquagsire23/SaltyNX
 **ultimate-research** for *code-mod-framework*
 
 https://github.com/ultimate-research/code-mod-framework
+
+How to compile
+
+https://github.com/ultimate-research/code-mod-framework/wiki/Environment-Setup:-Getting-Started
