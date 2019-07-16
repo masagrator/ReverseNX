@@ -3,6 +3,11 @@ SaltyNX plugin forcing docked or handheld graphics settings
 
 For now in experimental phase, because it looks like SaltyNX is not in good terms with some games (they will crash without any plugin).
 
+Flags:
+create in folder `saltynx\plugins\ReverseNX\` empty file:
+- `docked.flag` for docked mode
+- `handheld.flag` for handheld mode 
+
 Confirmed games working:
 - Crash Team Racing
 - God Eater 3
