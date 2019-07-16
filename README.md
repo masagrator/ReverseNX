@@ -1,7 +1,7 @@
 # ReverseNX
 SaltyNX plugin forcing docked or handheld graphics settings
 
-For now in experimental phase, because it looks like SaltyNX is not in good terms with some games.
+For now in experimental phase, because it looks like SaltyNX is not in good terms with some games (they will crash without any plugin).
 
 Confirmed games working:
 - God Eater 3
