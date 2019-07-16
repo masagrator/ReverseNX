@@ -21,8 +21,6 @@ For docked mode is recommended to use OC settings exactly as used in docked mode
 >
 >handheld_charging_mem=1600
 
-[Confirmed games working or not](gameslist.md)
-
 -----------
 
 Known issues:
@@ -30,6 +28,8 @@ Known issues:
 - Instability with some homebrews
 
 - SaltyNX is still under development, so it may cause issues on it's own. Different versions of game can behave diversely (f.e. Octopath Traveler)
+
+[Confirmed games working or not](gameslist.md)
 
 -----------
 
