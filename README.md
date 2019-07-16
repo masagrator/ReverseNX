@@ -3,6 +3,10 @@ SaltyNX plugin forcing docked or handheld graphics settings
 
 For now in experimental phase, because it looks like SaltyNX is not in good terms with some games (they will crash without any plugin).
 
+Testing was done on FW 7.0.1, Atmosphere 0.9.1-0.9.2
+
+It should work with ReinX too.
+
 -----------
 
 Flags:
