@@ -1,6 +1,6 @@
 | Working | Version(s) | Notes |
 | ------------- | ------------- | ------------- |
-| American Fugitive | v0 (1.0.0), v4 (1.0.4) |   |
+| American Fugitive | v0, v4 (1.0.0, 1.0.4) |   |
 | Crash Bandicoot N.Sane Trilogy | v0 (1.0.0) |   |
 | Crash Team Racing | v4 (1.0.4) | docked.flag also enables 4-player splitscreen, handheld.flag disables it |
 | God Eater 3 | v1 (1.4.0) |   |
