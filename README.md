@@ -12,6 +12,7 @@ SX OS is not supported.
 -----------
 
 Plugin works always globally. For now flag per titleid is not supported.
+
 Flags:
 create in folder `saltysd/plugins/ReverseNX/` empty file:
 - `docked.flag` for docked mode
