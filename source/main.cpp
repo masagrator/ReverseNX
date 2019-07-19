@@ -2,6 +2,8 @@
 
 #include <string.h>
 #include <stdio.h>
+#include <inttypes.h>
+#include <cstdlib>
 #include <dirent.h>
 #include <sys/iosupport.h>
 #include <sys/reent.h>
@@ -80,25 +82,49 @@ uint8_t GetOperationMode0() {
   return 0;
 }
 
+const char* CheckTitleID() {
+    char* titleid = malloc(0x20);
+    uint64_t titid = 0;
+    svcGetInfo(&titid, 18, CUR_PROCESS_HANDLE, 0);	
+    snprintf(titleid, 0x20, "%016" PRIx64, titid);
+	return titleid;
+}
+
 int main(int argc, char *argv[]) {
 	SaltySD_printf("SaltySD ReverseNX: alive\n");
+	char* tid_check = CheckTitleID();
+	char* flag_path = "sdmc:/SaltySD/plugins/";
+	char* handheld_flag = "/ReverseNX/handheld.flag";
+	char* docked_flag = "/ReverseNX/docked.flag";
+	char handheld_flag_path[128];
+	char docked_flag_path[64];
+	snprintf(handheld_flag_path, sizeof handheld_flag_path, "%s%s%s", flag_path, tid_check, handheld_flag);
+	snprintf(docked_flag_path, sizeof docked_flag_path, "%s%s%s", flag_path, tid_check, docked_flag);
 	
-	FILE* flag_handheld = SaltySDCore_fopen("sdmc:/SaltySD/plugins/ReverseNX/handheld.flag", "r+b");
-	FILE* flag_docked = SaltySDCore_fopen("sdmc:/SaltySD/plugins/ReverseNX/docked.flag", "r+b");
+	FILE* path_titleid_handheld = SaltySDCore_fopen(handheld_flag_path, "r");
+	FILE* path_titleid_docked = SaltySDCore_fopen(docked_flag_path, "r");
+	FILE* path_titleid_flag = SaltySDCore_fopen("sdmc:/SaltySD/flags/ReverseNX/titleid.flag", "r");
+	FILE* path_global_handheld = SaltySDCore_fopen("sdmc:/SaltySD/plugins/ReverseNX/handheld.flag", "r");
+	FILE* path_global_docked = SaltySDCore_fopen("sdmc:/SaltySD/plugins/ReverseNX/docked.flag", "r");
 	
 	// Get anchor for imports
 	// do not remove if you plan on using IMPORT
 	ANCHOR_ABS = SaltySDCore_getCodeStart();
+	SaltySD_printf("TITLEID:\n");
+	SaltySD_printf(tid_check);
+	SaltySD_printf("\n------------\n");	
 	
 	// Add function replacements here
-	if(flag_handheld) {
-		if(flag_docked) {
-			SaltySD_printf("Both flags detected. Applying default graphics settings.\n");
-			SaltySDCore_fclose(flag_handheld);
-			SaltySDCore_fclose(flag_docked);
+	if (!path_titleid_flag) goto global;
+	else goto titleid;
+
+titleid:
+	if(path_titleid_handheld) {
+		if(path_titleid_docked) {
+			SaltySD_printf("Both titleid flags detected. Applying default graphics settings.\n");
 		}
-		else if(!flag_docked) {
-			SaltySD_printf("Handheld flag detected. Applying handheld graphics settings.\n");	
+		else if(!path_titleid_docked) {
+			SaltySD_printf("Handheld titleid flag detected. Applying handheld graphics settings.\n");	
 			
 			SaltySD_printf("Setting GetPerformanceMode: 0\n");
 			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode0);
@@ -107,16 +133,15 @@ int main(int argc, char *argv[]) {
 			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode0);
 			
 			SaltySD_printf("SaltySD ReverseNX: finished\n");
-			SaltySDCore_fclose(flag_handheld);
 		}
+	goto close;
 	}
-
-	else if(!flag_handheld) {
-		if(!flag_docked) {
-		SaltySD_printf("No flag detected. Applying default graphics settings.\n");
+	else if(!path_titleid_handheld) {
+		if(!path_titleid_docked) {
+		SaltySD_printf("No titleid flag detected. Applying default graphics settings.\n");
 		}
-		else if(flag_docked) {
-			SaltySD_printf("Docked flag detected. Applying docked graphics settings.\n");	
+		else if(path_titleid_docked) {
+			SaltySD_printf("Docked titleid flag detected. Applying docked graphics settings.\n");	
 			
 			SaltySD_printf("Setting GetPerformanceMode: 1\n");
 			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode1);
@@ -125,10 +150,52 @@ int main(int argc, char *argv[]) {
 			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode1);
 			
 			SaltySD_printf("SaltySD ReverseNX: finished\n");
-			SaltySDCore_fclose(flag_docked);
 		}
-		
+	goto close;
 	}
 
+global:
+	if(path_global_handheld) {
+		if(path_global_docked) {
+			SaltySD_printf("Both global flags detected. Applying default graphics settings.\n");
+		}
+		else if(!path_global_docked) {
+			SaltySD_printf("Handheld global flag detected. Applying handheld graphics settings.\n");	
+			
+			SaltySD_printf("Setting GetPerformanceMode: 0\n");
+			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode0);
+			
+			SaltySD_printf("Setting GetOperationMode: 0\n");
+			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode0);
+			
+			SaltySD_printf("SaltySD ReverseNX: finished\n");
+		}
+	goto close;
+	}
+	else if(!path_global_handheld) {
+		if(!path_global_docked) {
+		SaltySD_printf("No docked or handheld global flag detected. Applying default graphics settings.\n");
+		}
+		else if(path_global_docked) {
+			SaltySD_printf("Docked global flag detected. Applying docked graphics settings.\n");	
+			
+			SaltySD_printf("Setting GetPerformanceMode: 1\n");
+			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode1);
+			
+			SaltySD_printf("Setting GetOperationMode: 1\n");
+			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode1);
+			
+			SaltySD_printf("SaltySD ReverseNX: finished\n");
+		}
+	goto close;
+	}
+	
+
+close:
+	SaltySDCore_fclose(path_titleid_handheld);
+	SaltySDCore_fclose(path_titleid_docked);
+	SaltySDCore_fclose(path_global_handheld);
+	SaltySDCore_fclose(path_global_docked);
+	SaltySDCore_fclose(path_titleid_flag);
 	__libnx_exit(0);
 }
