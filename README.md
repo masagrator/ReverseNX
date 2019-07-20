@@ -11,10 +11,11 @@ SX OS is not supported.
 
 -----------
 
-Plugin works always globally. For now flag per titleid is not supported.
+Plugin works can work globally or per titleid.
+To activate loading per titleid, put empty file `titleid.flag` to `saltysd/flags/ReverseNX/`
 
 Flags:
-create in folder `saltysd/plugins/ReverseNX/` empty file:
+create in folder `saltysd/plugins/ReverseNX/` (globally) or `saltysd/plugins/(title_id)/ReverseNX/` (per titleid) empty file:
 - `docked.flag` for docked mode
 
 or
@@ -41,9 +42,9 @@ Known issues:
 >
 > Some games may crash for unknown reason in one Switch, in another it works without issues,
 >
-> EmuMMC freezes.
+> EmuMMC freezes in newer FW versions (from tests it works with 4.1.0/6.1.0/6.2.0),
 >
-> 32 bit games are unsupported (they break SaltyNX)
+> 32 bit games are unsupported (they break SaltyNX),
 >
 > Sometimes have issues with Hekate when it's not loading cfw from Payload menu.
 
