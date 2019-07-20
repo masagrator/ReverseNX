@@ -11,7 +11,8 @@ SX OS is not supported.
 
 -----------
 
-Plugin works can work globally or per titleid.
+Plugin can work globally or per titleid.
+
 To activate loading per titleid, put empty file `titleid.flag` to `saltysd/flags/ReverseNX/`
 
 Flags:
