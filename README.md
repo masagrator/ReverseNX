@@ -48,6 +48,8 @@ Known issues:
 > 32 bit games are unsupported,
 >
 > Sometimes have issues with Hekate when it's not loading cfw from Payload menu.
+>
+> 0.3 Release crashes OS if You have enabled cheats and cheats file inside game You want to boot.
 
 [Confirmed games working or not](gameslist.md)
 
