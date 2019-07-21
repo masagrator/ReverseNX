@@ -43,9 +43,9 @@ Known issues:
 >
 > Some games may crash for unknown reason in one Switch, in another it works without issues,
 >
-> EmuMMC freezes in newer FW version using Hekate Launch menu (from tests it works with 4.1.0/6.1.0/6.2.0), confirmed that enabling emummc and using fusee-primary (with Hekate Payload menu too) partially works with 7.0.1/8.1.0.
+> EmuMMC freezes in newer FW version using Hekate Launch menu (from tests it works with 4.1.0/6.1.0/6.2.0), confirmed that enabling emummc and using fusee-primary (with Hekate Payload menu too) works with 7.0.1/8.1.0.
 >
-> 32 bit games are unsupported (they break SaltyNX),
+> 32 bit games are unsupported,
 >
 > Sometimes have issues with Hekate when it's not loading cfw from Payload menu.
 
