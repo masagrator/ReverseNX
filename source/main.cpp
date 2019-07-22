@@ -35,6 +35,7 @@ Handle orig_main_thread;
 void* orig_ctx;
 void* orig_saved_lr;
 uint8_t* set = 0;
+uint8_t* def = 0;
 
 void __libnx_init(void* ctx, Handle main_thread, void* saved_lr) {
 	extern char* fake_heap_start;
@@ -112,6 +113,7 @@ titleid:
 	if(path_titleid_handheld) {
 		if(path_titleid_docked) {
 			SaltySD_printf("Both titleid flags detected. Applying default graphics settings.\n");
+			def = 1;
 		}
 		else if(!path_titleid_docked) {
 			SaltySD_printf("Handheld titleid flag detected. Applying handheld graphics settings.\n");	
@@ -124,6 +126,7 @@ titleid:
 	else if(!path_titleid_handheld) {
 		if(!path_titleid_docked) {
 		SaltySD_printf("No titleid flag detected. Applying default graphics settings.\n");
+		def = 1;
 		}
 		else if(path_titleid_docked) {
 			SaltySD_printf("Docked titleid flag detected. Applying docked graphics settings.\n");	
@@ -139,6 +142,7 @@ global:
 	if(path_global_handheld) {
 		if(path_global_docked) {
 			SaltySD_printf("Both global flags detected. Applying default graphics settings.\n");
+			def = 1;
 		}
 		else if(!path_global_docked) {
 			SaltySD_printf("Handheld global flag detected. Applying handheld graphics settings.\n");	
@@ -151,6 +155,7 @@ global:
 	else if(!path_global_handheld) {
 		if(!path_global_docked) {
 		SaltySD_printf("No docked or handheld global flag detected. Applying default graphics settings.\n");
+		def = 1;
 		}
 		else if(path_global_docked) {
 			SaltySD_printf("Docked global flag detected. Applying docked graphics settings.\n");	
@@ -164,8 +169,8 @@ global:
 	
 
 close:
-	SaltySD_printf("Setting GetOperationMode: %d\n", set);
-	SaltySD_printf("Setting GetPerformanceMode: %d\n", set);	
+	if (def == 0) SaltySD_printf("Setting GetOperationMode: %d\n", set);
+	if (def == 0) SaltySD_printf("Setting GetPerformanceMode: %d\n", set);	
 	SaltySDCore_fclose(path_titleid_handheld);
 	SaltySDCore_fclose(path_titleid_docked);
 	SaltySDCore_fclose(path_global_handheld);
