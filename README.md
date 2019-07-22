@@ -72,7 +72,7 @@ https://github.com/ultimate-research/code-mod-framework
 *Deprecated from 0.3 release*
 https://github.com/jugeeya/UltimateTrainingModpack/releases/tag/1.1
 
-**zakaria** for testing
+**zakaria** and **crow132** for testing
 
 How to compile plugin
 
