@@ -1,7 +1,7 @@
 # ReverseNX
 SaltyNX plugin that replace games checks if you are using docked or handheld mode. They are mostly used to determine graphics settings and unlocking some options that are available only in docked/handheld mode.
 
-For now in experimental phase, because it looks like SaltyNX is not in good terms with some games (they will crash without any plugin)  or maybe I screwed up.
+For now in experimental phase, because SaltyNX has many bugs that need to be patched.
 
 Tests were done on FW 7.0.1-8.1.0, Atmosphere 0.9.1-0.9.2
 
