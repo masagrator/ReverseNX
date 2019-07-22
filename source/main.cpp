@@ -121,7 +121,6 @@ titleid:
 			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode);
 			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode);
 		}
-	goto close;
 	}
 	else if(!path_titleid_handheld) {
 		if(!path_titleid_docked) {
@@ -135,8 +134,8 @@ titleid:
 			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode);
 			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode);
 		}
-	goto close;
 	}
+	goto close;
 
 global:
 	if(path_global_handheld) {
@@ -150,7 +149,6 @@ global:
 			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode);
 			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode);
 		}
-	goto close;
 	}
 	else if(!path_global_handheld) {
 		if(!path_global_docked) {
@@ -164,9 +162,8 @@ global:
 			SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode);
 			SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode);
 		}
-	goto close;
 	}
-	
+	goto close;
 
 close:
 	if (def == 0) SaltySD_printf("Setting GetOperationMode: %d\n", set);
