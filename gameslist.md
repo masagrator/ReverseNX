@@ -20,3 +20,4 @@
 | American Fugitive | v5 (1.0.5) | Unknown |
 | Goat Simulator | v0 (1.0.0) | 32-bit game, not supported |
 | Mario Kart 8 | v9 (1.7.1) | 32-bit game, not supported |
+| Monster Hunter Generations Ultimate |   | 32-bit game, not supported |
