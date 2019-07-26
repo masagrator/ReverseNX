@@ -55,7 +55,7 @@ Known issues:
 >
 > Sometimes have issues with Hekate when it's not loading cfw from Payload menu.
 >
-> 0.3 Release crashes OS if You have enabled cheats and cheats file inside game You want to boot.
+> 0.3X Release crashes OS if something is blocking access to svcGetDebugEventInfo when game is booting (f.e. Atmosphere cheats if it's enabled and files are in cheats folder of booting game),
 >
 > For EmuMMC (and maybe sysnand too): if you use freebird, then OS can crash if you try to open hbmenu while running game (don't know if this was an issue with older releases).
 
