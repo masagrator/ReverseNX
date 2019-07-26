@@ -92,11 +92,15 @@ int main(int argc, char *argv[]) {
 	char* docked_flag = "/ReverseNX/docked.flag";
 	char handheld_flag_path[128];
 	char docked_flag_path[64];
+	char tid_path[64];
+	char tid_path_reversenx[128];
+	char* ReverseNX = "/ReverseNX";
 	snprintf(handheld_flag_path, sizeof handheld_flag_path, "%s%s%s", flag_path, tid_check, handheld_flag);
 	snprintf(docked_flag_path, sizeof docked_flag_path, "%s%s%s", flag_path, tid_check, docked_flag);
 	
-	FILE* path_titleid_handheld = SaltySDCore_fopen(handheld_flag_path, "r");
-	FILE* path_titleid_docked = SaltySDCore_fopen(docked_flag_path, "r");
+	FILE* path_createdock_flag = SaltySDCore_fopen("sdmc:/SaltySD/flags/ReverseNX/createdock.flag", "r");
+	FILE* path_createhandheld_flag = SaltySDCore_fopen("sdmc:/SaltySD/flags/ReverseNX/createhandheld.flag", "r");
+	FILE* path_createremove_flag = SaltySDCore_fopen("sdmc:/SaltySD/flags/ReverseNX/createremove.flag", "r");
 	FILE* path_titleid_flag = SaltySDCore_fopen("sdmc:/SaltySD/flags/ReverseNX/titleid.flag", "r");
 	FILE* path_global_handheld = SaltySDCore_fopen("sdmc:/SaltySD/plugins/ReverseNX/handheld.flag", "r");
 	FILE* path_global_docked = SaltySDCore_fopen("sdmc:/SaltySD/plugins/ReverseNX/docked.flag", "r");
@@ -105,11 +109,51 @@ int main(int argc, char *argv[]) {
 	// do not remove if you plan on using IMPORT
 	ANCHOR_ABS = SaltySDCore_getCodeStart();
 	
-	// Add function replacements here
+	// 
+	if((path_createdock_flag || path_createhandheld_flag || path_createremove_flag) && path_titleid_flag) {
+		SaltySDCore_remove(handheld_flag_path);
+		SaltySDCore_remove(docked_flag_path);
+		SaltySDCore_fclose(path_createdock_flag);
+		SaltySDCore_fclose(path_createhandheld_flag);
+		SaltySDCore_fclose(path_createremove_flag);
+		snprintf(tid_path, sizeof tid_path, "%s%s", flag_path, tid_check);
+		snprintf(tid_path_reversenx, sizeof tid_path_reversenx, "%s%s", tid_path, ReverseNX);
+		if (!path_createdock_flag || !path_createhandheld_flag) {
+			SaltySDCore_mkdir(tid_path, ACCESSPERMS);
+			SaltySDCore_mkdir(tid_path_reversenx, ACCESSPERMS);
+		}
+		if (path_createdock_flag) {
+			FILE* createdock = SaltySDCore_fopen(docked_flag_path, "w");
+			SaltySDCore_remove(handheld_flag_path);
+			SaltySDCore_fclose(createdock);
+		}
+		else if (path_createhandheld_flag) {
+			FILE* createhandheld = SaltySDCore_fopen(handheld_flag_path, "w");
+			SaltySDCore_remove(docked_flag_path);
+			SaltySDCore_fclose(createhandheld);
+		}
+		else if (path_createremove_flag) {
+			SaltySDCore_remove(docked_flag_path);
+			SaltySDCore_remove(handheld_flag_path);
+		}
+		SaltySDCore_remove("sdmc:/SaltySD/flags/ReverseNX/createdock.flag");
+		SaltySDCore_remove("sdmc:/SaltySD/flags/ReverseNX/createhandheld.flag");
+		SaltySDCore_remove("sdmc:/SaltySD/flags/ReverseNX/createremove.flag");
+	}
+	else {
+		SaltySDCore_fclose(path_createdock_flag);
+		SaltySDCore_fclose(path_createhandheld_flag);
+		SaltySDCore_fclose(path_createremove_flag);
+		SaltySDCore_remove("sdmc:/SaltySD/flags/ReverseNX/createdock.flag");
+		SaltySDCore_remove("sdmc:/SaltySD/flags/ReverseNX/createhandheld.flag");
+		SaltySDCore_remove("sdmc:/SaltySD/flags/ReverseNX/createremove.flag");
+	}
 	if (!path_titleid_flag) goto global;
 	else goto titleid;
 
 titleid:
+	FILE* path_titleid_handheld = SaltySDCore_fopen(handheld_flag_path, "r");
+	FILE* path_titleid_docked = SaltySDCore_fopen(docked_flag_path, "r");
 	if(path_titleid_handheld) {
 		if(path_titleid_docked) {
 			SaltySD_printf("Both titleid flags detected. Applying default graphics settings.\n");

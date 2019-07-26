@@ -11,6 +11,8 @@ extern "C" {
 	u64 SaltySDCore_findCode(u8* code, size_t size) LINKABLE;
 	FILE* SaltySDCore_fopen(const char* filename, const char* mode) LINKABLE;
 	int SaltySDCore_fclose(FILE* stream) LINKABLE;
+	int SaltySDCore_mkdir(const char* dirname, mode_t mode) LINKABLE;
+	extern int SaltySDCore_remove(const char* filename) LINKABLE;
 }
 
 #endif // SALTYSD_CORE_H
