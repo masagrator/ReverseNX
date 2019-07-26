@@ -14,6 +14,8 @@ SX OS is not supported.
 Plugin can work globally or per titleid.
 
 To activate loading per titleid, put empty file `titleid.flag` to `saltysd/flags/ReverseNX/`
+For global mode you can use ReverseNX-Tool
+https://github.com/masagrator/ReverseNX-Tool
 
 Flags:
 create in folder `saltysd/plugins/ReverseNX/` (globally) or `saltysd/plugins/(title_id)/ReverseNX/` (per titleid) empty file:
