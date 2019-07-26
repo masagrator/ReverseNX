@@ -19,6 +19,8 @@ For global mode you can use ReverseNX-Tool
 
 https://github.com/masagrator/ReverseNX-Tool
 
+------------
+
 Flags:
 create in folder `saltysd/plugins/ReverseNX/` (globally) or `saltysd/plugins/(title_id)/ReverseNX/` (per titleid) empty file:
 - `docked.flag` for docked mode
