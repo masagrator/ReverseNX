@@ -15,7 +15,7 @@ Plugin can work globally or per titleid.
 
 To activate loading per titleid, put empty file `titleid.flag` to `saltysd/flags/ReverseNX/`
 
-For global mode you can use ReverseNX-Tool
+You can use ReverseNX-Tool homebrew for easier management of both modes.
 
 https://github.com/masagrator/ReverseNX-Tool
 
