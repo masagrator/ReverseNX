@@ -1,6 +1,6 @@
 | Working | Version(s) | Notes |
 | ------------- | ------------- | ------------- |
-| American Fugitive | v0, v4 (1.0.0, 1.0.4) |   |
+| American Fugitive | v0, v4, v5 (1.0.0, 1.0.4, 1.0.5) |   |
 | Crash Bandicoot N.Sane Trilogy | v0 (1.0.0) |   |
 | Crash Team Racing | v4 (1.0.4) | docked.flag also enables 4-player splitscreen, handheld.flag disables it |
 | Fast RMX | v3 (1.0.3) |   |
@@ -17,7 +17,6 @@
 
 | Not working | Version(s) | Why? |
 | ------------- | ------------- | ------------- |
-| American Fugitive | v5 (1.0.5) | Unknown |
 | Goat Simulator | v0 (1.0.0) | 32-bit game, not supported |
 | Mario Kart 8 | v9 (1.7.1) | 32-bit game, not supported |
 | Monster Hunter Generations Ultimate |   | 32-bit game, not supported |
