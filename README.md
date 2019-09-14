@@ -2,7 +2,7 @@
 SaltyNX plugin that replaces games checks if you are using docked or handheld mode. They are mostly used to determine graphics settings and unlocking some options that are available only in docked/handheld mode.
 For now in experimental phase, because SaltyNX has many bugs that need to be patched.
 
-Tests were done on FW 7.0.1-8.1.0, Atmosphere 0.9.1-0.9.4
+Tests were done on FW 7.0.1-9.0.0, Atmosphere 0.9.1-0.9.4
 
 It should work with ReinX too.
 
