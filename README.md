@@ -1,13 +1,14 @@
 # ReverseNX
-SaltyNX plugin that replace games checks if you are using docked or handheld mode. They are mostly used to determine graphics settings and unlocking some options that are available only in docked/handheld mode.
-
+SaltyNX plugin that replaces games checks if you are using docked or handheld mode. They are mostly used to determine graphics settings and unlocking some options that are available only in docked/handheld mode.
 For now in experimental phase, because SaltyNX has many bugs that need to be patched.
 
-Tests were done on FW 7.0.1-8.1.0, Atmosphere 0.9.1-0.9.2
+Tests were done on FW 7.0.1-8.1.0, Atmosphere 0.9.1-0.9.4
 
 It should work with ReinX too.
 
 SX OS is not supported.
+
+Clean Kosmos crashes SaltyNX because of too much sysmodules. You need to delete some (f.e. emuiibo, because it crashes SaltyNX on it's own). For less issues it's recommended to use Kosmos v14 at least.
 
 -----------
 
@@ -43,17 +44,12 @@ Known issues:
 
 - SaltyNX is still under development, so it may cause issues on it's own:
 
-> Different versions of game can behave diversely,
->
+
 > Instability with some homebrews,
 >
-> Some games may crash for unknown reason in one Switch, in another it works without issues,
->
-> EmuMMC freezes in newer FW version using Hekate Launch menu (from tests it works with 4.1.0/6.1.0/6.2.0), confirmed that enabling emummc and using fusee-primary (with Hekate Payload menu too) works with 7.0.1/8.1.0.
+> You need to have at least Hekate 5.0.2 if you don't want issues related to Hekate (rememeber to add to hekate_ipl.ini under your config line `kip1=atmosphere/kips/*` or other corresponding to you cfw).
 >
 > 32 bit games are unsupported,
->
-> Sometimes have issues with Hekate when it's not loading cfw from Payload menu.
 >
 > 0.3X Release crashes OS if something is blocking access to svcGetDebugEventInfo when game is booting (f.e. Atmosphere cheats if it's enabled and files are in cheats folder of booting game),
 >
