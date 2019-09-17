@@ -45,13 +45,13 @@ Known issues:
 - SaltyNX is still under development, so it may cause issues on it's own:
 
 
-> Instability with some homebrews,
+> Instability with some homebrews and sysmodules,
 >
 > You need to have at least Hekate 5.0.2 if you don't want issues related to Hekate (rememeber to add to hekate_ipl.ini under your config line `kip1=atmosphere/kips/*` or other corresponding to you cfw).
 >
 > 32 bit games are unsupported,
 >
-> 0.3X Release crashes OS if something is blocking access to svcGetDebugEventInfo when game is booting (f.e. Atmosphere cheats if it's enabled and files are in cheats folder of booting game),
+> 0.3X Release crashes OS if in titles folder of game you want to boot are cheats. For avoiding this you can use disabled mode in ReverseNX-Tool,
 >
 > For EmuMMC (and maybe sysnand too): if you use freebird, then OS can crash if you try to open hbmenu while running game (don't know if this was an issue with older releases).
 
