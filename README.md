@@ -8,7 +8,7 @@ It should work with ReinX too.
 
 SX OS is not supported.
 
-Clean Kosmos crashes SaltyNX because of too much sysmodules. You need to delete some (f.e. emuiibo, because it crashes SaltyNX on it's own). For less issues it's recommended to use Kosmos v14 at least.
+Clean Kosmos crashes SaltyNX because of too much sysmodules. You need to delete some (f.e. emuiibo, because it crashes SaltyNX on it's own). For less issues it's recommended to use Kosmos v14.0.1 at least.
 
 -----------
 
