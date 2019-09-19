@@ -57,6 +57,8 @@ Known issues:
 
 [Confirmed games working or not](gameslist.md)
 
+**exceptions.txt** contains titleids of games that for some reason are not compatible with SaltyNX in newest release of ReverseNX.
+Put this file to SaltySD folder.
 
 -----------
 
