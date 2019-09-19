@@ -1,0 +1,3 @@
+;GRID: Autosport
+;1.4.0RC9 crashes, 1.4.1_45339 stucks in infinite loop
+0100DC800A602000
