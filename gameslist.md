@@ -17,6 +17,9 @@
 
 | Not working | Version(s) | Why? |
 | ------------- | ------------- | ------------- |
-| Goat Simulator | v0 (1.0.0) | 32-bit game, not supported |
-| Mario Kart 8 | v9 (1.7.1) | 32-bit game, not supported |
-| Monster Hunter Generations Ultimate |   | 32-bit game, not supported |
+| Azure Striker Gunvolt: Striker Pack | all | 32-bit game, not supported |
+| Grid: Autosport | 1.4.0_RC9, 1.4.1_45339 | unknown |
+| Goat Simulator | all | 32-bit game, not supported |
+| Mario Kart 8 | all | 32-bit game, not supported |
+| Monster Hunter Generations Ultimate | all | 32-bit game, not supported |
+| Ni no Kuni: Wrath of the White Witch | all | 32-bit game, not supported |
