@@ -18,6 +18,7 @@
 | Not working | Version(s) | Why? |
 | ------------- | ------------- | ------------- |
 | Azure Striker Gunvolt: Striker Pack | all | 32-bit game, not supported |
+| Darksiders 2 | 1.0.0 | unknown |
 | Grid: Autosport | 1.4.0_RC9, 1.4.1_45339 | unknown |
 | Goat Simulator | all | 32-bit game, not supported |
 | Mario Kart 8 | all | 32-bit game, not supported |
