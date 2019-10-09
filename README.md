@@ -66,6 +66,10 @@ For _Atmosphere_ or _Reinx_ you can use combination KIP.zip + ReverseNX or NSP.z
 
 For _SX OS_ (2.9 or newer, older are not working) only NSP.zip + ReverseNX.
 
+For SX OS remember to rename _atmosphere_ folder to _sxos_
+
+For ReinX remember to rename _atmosphere_ folder to _reinx_ and in case of using KIP rename _kips_ folder to _sysmodules_
+
 -----------
 
 Thanks to 
