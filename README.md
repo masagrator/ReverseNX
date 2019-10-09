@@ -6,7 +6,7 @@ Tests were done on FW 7.0.1-9.0.0, Atmosphere 0.9.1-0.9.4
 
 It should work with ReinX too.
 
-SX OS older than 2.9 are not working (no technical support for all SX OS versions).
+SX OS older than 2.9 are not working (no technical support for all SX OS versions). Tested only on sysNAND 9.0.0, 2.9.2
 
 Clean Kosmos crashes SaltyNX because of too much sysmodules. You need to delete some (f.e. emuiibo, because it crashes SaltyNX on it's own). For less issues it's recommended to use Kosmos v14.0.1 at least.
 
