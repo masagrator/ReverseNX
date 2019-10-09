@@ -63,6 +63,7 @@ Put this file to SaltySD folder.
 **How to download release:**
 
 For _Atmosphere_ or _Reinx_ you can use combination KIP.zip + ReverseNX or NSP.zip + ReverseNX
+
 For _SX OS_ (2.9 or newer, older are not working) only NSP.zip + ReverseNX.
 
 -----------
