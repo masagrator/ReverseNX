@@ -60,6 +60,8 @@ Known issues:
 **exceptions.txt** contains titleids of games that for some reason are not compatible with SaltyNX in newest release of ReverseNX.
 Put this file to SaltySD folder.
 
+---
+
 **How to download release:**
 
 For _Atmosphere_ or _Reinx_ you can use combination KIP.zip + ReverseNX or NSP.zip + ReverseNX
