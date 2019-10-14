@@ -24,3 +24,4 @@
 | Mario Kart 8 | all | 32-bit game, not supported |
 | Monster Hunter Generations Ultimate | all | 32-bit game, not supported |
 | Ni no Kuni: Wrath of the White Witch | all | 32-bit game, not supported |
+| Planescape: Torment and Icewind Dale | all | 32-bit game, not supported |
