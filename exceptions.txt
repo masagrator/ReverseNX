@@ -7,5 +7,5 @@
 010071800BA98000
 
 ;Luigi's Mansion 3
-;1.0.0 and 1.0.1 won't boot
+;1.0.0 and 1.1.0 won't boot
 0100DCA0064A6000
