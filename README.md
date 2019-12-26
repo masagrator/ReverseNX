@@ -68,7 +68,7 @@ For _Atmosphere_ or _Reinx_ you can use combination KIP.zip + ReverseNX or NSP.z
 
 For _SX OS_ (2.9 or newer, older are not working) only NSP.zip + ReverseNX.
 
-For Atmosphere <=0.9.4 and any other CFW remember to rename _contents_ folder to _titles_
+For Atmosphere <=0.9.4 and any other CFW in case of using NSP remember to rename _contents_ folder to _titles_
 
 For SX OS remember to rename _atmosphere_ folder to _sxos_
 
