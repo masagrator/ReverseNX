@@ -2,7 +2,7 @@
 SaltyNX plugin that replaces games checks if you are using docked or handheld mode. They are mostly used to determine graphics settings and unlocking some options that are available only in docked/handheld mode.
 For now in experimental phase, because SaltyNX has many bugs that need to be patched.
 
-Tests were done on FW 7.0.1-9.0.0, Atmosphere 0.9.1-0.9.4
+Tests were done on FW 7.0.1-9.1.0, Atmosphere 0.9.1-0.9.4, 0.10.1
 
 It should work with ReinX too.
 
@@ -67,6 +67,8 @@ Put this file to SaltySD folder.
 For _Atmosphere_ or _Reinx_ you can use combination KIP.zip + ReverseNX or NSP.zip + ReverseNX
 
 For _SX OS_ (2.9 or newer, older are not working) only NSP.zip + ReverseNX.
+
+For Atmosphere <=0.9.4 remember to rename _contents_ folder to _titles_
 
 For SX OS remember to rename _atmosphere_ folder to _sxos_
 
