@@ -195,7 +195,6 @@ titleid:
 // return 1 - docked mode
 
 uint32_t GetPerformanceMode() {
-	CheckFlag();
 	if (def == 1) {
 		uint32_t nnperformance = _ZN2nn2oe18GetPerformanceModeEv();
 		return nnperformance;
@@ -204,7 +203,6 @@ uint32_t GetPerformanceMode() {
 }
 
 uint8_t GetOperationMode() {
-	CheckFlag();
 	if (def == 1) {
 		uint8_t nnoperation = _ZN2nn2oe16GetOperationModeEv();
 		return nnoperation;
