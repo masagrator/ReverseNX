@@ -18,9 +18,10 @@
 | Not working | Version(s) | Why? |
 | ------------- | ------------- | ------------- |
 | Azure Striker Gunvolt: Striker Pack | all | 32-bit game, not supported |
-| Darksiders 2 | 1.0.0 | unknown |
+| Darksiders 2 | 1.0.0 | Probably heap related |
 | Grid: Autosport | 1.4.0_RC9, 1.4.1_45339 | unknown |
 | Goat Simulator | all | 32-bit game, not supported |
+| Luigi's Mansion 3 | 1.0.0-1.2.1 | unknown |
 | Mario Kart 8 | all | 32-bit game, not supported |
 | Monster Hunter Generations Ultimate | all | 32-bit game, not supported |
 | Ni no Kuni: Wrath of the White Witch | all | 32-bit game, not supported |
