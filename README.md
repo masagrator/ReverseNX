@@ -51,7 +51,7 @@ Known issues:
 >
 > 32 bit games are unsupported,
 >
-> 0.3X Release crashes OS if in titles folder of game you want to boot are cheats and you are using Atmosphere. For avoiding this you can use disabled mode in ReverseNX-Tool,
+> 0.3X Release crashes OS if in titles folder of game you want to boot are cheats and you are using Atmosphere. For avoiding this you can use ReverseNX-Tool (more in tool's repo)
 >
 > For EmuMMC (and maybe sysnand too): if you use freebird, then OS can crash if you try to open hbmenu while running game (don't know if this was an issue with older releases).
 
