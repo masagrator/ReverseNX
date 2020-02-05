@@ -1,6 +1,6 @@
 | Working | Version(s) | Notes |
 | ------------- | ------------- | ------------- |
-| American Fugitive | v0, v4, v5 (1.0.0, 1.0.4, 1.0.5) |   |
+| American Fugitive | all |   |
 | Crash Bandicoot N.Sane Trilogy | v0 (1.0.0) |   |
 | Crash Team Racing | v4 (1.0.4) | docked.flag also enables 4-player splitscreen, handheld.flag disables it |
 | Fast RMX | v3 (1.0.3) |   |
@@ -13,7 +13,7 @@
 | The Legend of Zelda: Breath of the Wild | v12 (1.6.0) |   |
 | This is the Police | v1 (1.0.1) |   |
 | Xenoblade Chronicles 2 | v14 (2.0.2) |   |
-| Yooka-Yaylee | v1 (1.1.0)  |   |
+| Yooka-Laylee | v1 (1.1.0)  |   |
 
 | Not working | Version(s) | Why? |
 | ------------- | ------------- | ------------- |
