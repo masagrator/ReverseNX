@@ -47,11 +47,11 @@ Known issues:
 
 > Instability with some homebrews and sysmodules,
 >
-> You need to have at least Hekate 5.0.2 if you don't want issues related to Hekate (rememeber to add to hekate_ipl.ini under your config line `kip1=atmosphere/kips/*` or other corresponding to you cfw).
+> You need to have at least Hekate 5.0.2 if you don't want issues related to Hekate (rememeber to add to hekate_ipl.ini under your config line `kip1=atmosphere/kips/*` or other corresponding to your cfw).
 >
 > 32 bit games are unsupported,
 >
-> 0.3X Release crashes OS if in titles folder of game you want to boot are cheats and you are using Atmosphere. For avoiding this you can use ReverseNX-Tool (more in tool's repo)
+> 0.3X Release crashes OS if in titles/contents folder of game you want to boot are cheats and you are using Atmosphere. To avoid this you can use ReverseNX-Tool (more in tool's repo)
 >
 > For EmuMMC (and maybe sysnand too): if you use freebird, then OS can crash if you try to open hbmenu while running game (don't know if this was an issue with older releases).
 
