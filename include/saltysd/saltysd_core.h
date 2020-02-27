@@ -12,7 +12,7 @@ extern "C" {
 	FILE* SaltySDCore_fopen(const char* filename, const char* mode) LINKABLE;
 	int SaltySDCore_fclose(FILE* stream) LINKABLE;
 	int SaltySDCore_mkdir(const char* dirname, mode_t mode) LINKABLE;
-	size_t SaltySDCore_fwrite(const void *ptr, size_t size, size_t nitems, FILE *stream) LINKABLE;
+	size_t SaltySDCore_fwrite(const void *ptr, size_t size, size_t count, FILE *stream) LINKABLE;
 	extern int SaltySDCore_remove(const char* filename) LINKABLE;
 }
 
