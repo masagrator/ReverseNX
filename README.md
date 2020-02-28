@@ -1,5 +1,6 @@
 # ReverseNX
 SaltyNX plugin that forces games to think that you are using docked or handheld mode.
+
 To download latest SaltyNX, go [here](https://github.com/masagrator/SaltyNX/releases).
 
 You can use that to change graphics settings and unlock some options that are available only in docked/handheld mode.
