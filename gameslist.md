@@ -1,4 +1,4 @@
-Working are only examples to test if ReverseNX is working. This list is not containing all working games.
+This list contains game examples that are confirmed working to have examples to test on if ReverseNX is working. This list is not containing all working games.
 
 For not working games check SaltyNX repo
 
