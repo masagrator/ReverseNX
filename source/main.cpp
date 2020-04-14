@@ -8,8 +8,6 @@
 #include "saltysd/SaltySD_ipc.h"
 #include "saltysd/SaltySD_dynamic.h"
 
-#include "saltysd/SaltySD_helper.h"
-
 extern "C" {
 	extern u32 __start__;
 
@@ -212,8 +210,6 @@ uint8_t GetOperationMode() {
 
 int main(int argc, char *argv[]) {
 	SaltySD_printf("SaltySD ReverseNX %s: alive\n", ver);
-
-	ANCHOR_ABS = SaltySDCore_getCodeStart();
 	CheckFlag();
 
 	SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", (void*)GetPerformanceMode);
