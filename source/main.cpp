@@ -61,7 +61,7 @@ void __attribute__((weak)) NORETURN __libnx_exit(int rc) {
 }
 
 const char* CheckTitleID() {
-    char* titleid = malloc(0x20);
+    char* titleid = (char*)malloc(0x20);
     uint64_t titid = 0;
     svcGetInfo(&titid, 18, CUR_PROCESS_HANDLE, 0);	
     snprintf(titleid, 0x20, "%016" PRIx64, titid);
@@ -74,7 +74,7 @@ void CheckFlag() {
 	FILE* path_createhandheld_flag = SaltySDCore_fopen("sdmc:/SaltySD/flags/ReverseNX/createhandheld.flag", "r");
 	FILE* path_createremove_flag = SaltySDCore_fopen("sdmc:/SaltySD/flags/ReverseNX/createremove.flag", "r");
 
-	char* tid_check = CheckTitleID();
+	const char* tid_check = CheckTitleID();
 	char* flag_path = "sdmc:/SaltySD/plugins/";
 	char* handheld_flag = "/ReverseNX/handheld.flag";
 	char* docked_flag = "/ReverseNX/docked.flag";
@@ -216,7 +216,7 @@ int main(int argc, char *argv[]) {
 	ANCHOR_ABS = SaltySDCore_getCodeStart();
 	CheckFlag();
 
-	SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", &GetPerformanceMode);
-	SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", &GetOperationMode);
+	SaltySDCore_ReplaceImport("_ZN2nn2oe18GetPerformanceModeEv", (void*)GetPerformanceMode);
+	SaltySDCore_ReplaceImport("_ZN2nn2oe16GetOperationModeEv", (void*)GetOperationMode);
 	SaltySD_printf("SaltySD ReverseNX %s: injection finished\n", ver);
 }
