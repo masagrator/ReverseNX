@@ -1,6 +1,6 @@
 # ReverseNX
 
-# PLUGIN WAS DUMPED FOR ReverseNX-Tool >=2.0.0!!! DOWNLOAD ReverseNX-Tool from [here](https://github.com/masagrator/SaltyNX/releases)
+# PLUGIN WAS DUMPED FOR ReverseNX-Tool >=2.0.0!!! DOWNLOAD ReverseNX-Tool from [here](https://github.com/masagrator/ReverseNX-Tool)
 
 SaltyNX plugin that forces games to think that you are using docked or handheld mode.
 
